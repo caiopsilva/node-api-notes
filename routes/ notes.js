@@ -1,7 +1,6 @@
 const NotesDB = require('../config/dbModel')
 
 module.exports = (app) => {
-
   app.get('/notes', (req, res) => {
     NotesDB.find({}, (err, note) => {
       if (err) { res.send(err) }
